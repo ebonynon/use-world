@@ -1,0 +1,24 @@
+apiVersion: autoscaling/v2beta1
+kind: HorizontalPodAutoscaler
+metadata:
+  annotations: null
+  labels:
+    app_environment_id: 5075f6f3-63d3-4801-8196-5e2bb24dffc8
+    env_id: e4869bab-0957-4bf1-89f6-40145e6d1429
+    env_name: lasanaa
+    hpa_id: 064f2314-7066-450d-97fb-3cdec30636cd
+    organization_id: 8b881a3f-0c62-4ca4-ab9a-db66a32ed28c
+    platformer_app_id: 25ab12bc-853f-4d03-b98a-a3267b2be840
+    platformer_app_name: simple-naaa
+    platformer_component: rudder
+    platformer_system: "true"
+    project_id: 306c7793-1f94-4221-a91c-46e5e233ebe8
+  name: simple-naaa
+  namespace: okay
+spec:
+  maxReplicas: 1
+  minReplicas: 1
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: simple-naaa
